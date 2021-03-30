@@ -7,7 +7,9 @@ const listItemsRef = document.querySelectorAll('.item');
 const getInfoRef = list => {
   return list.forEach(item => {
     console.log(`Категория: ${item.firstElementChild.textContent}`);
-    console.log(`Количество элементов: ${item.querySelectorAll('li').length}`);
+    console.log(
+      `     Количество элементов: ${item.querySelectorAll('li').length}`,
+    );
   });
 };
 

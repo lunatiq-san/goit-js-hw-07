@@ -7,7 +7,7 @@ const ingredients = [
   'Приправы',
 ];
 
-const makeListItemsRef = array => {
+const makeListItems = array => {
   array.forEach(value => {
     const ingredientsRef = document.querySelector('#ingredients');
     const listItemsRef = document.createElement('li');
@@ -16,4 +16,4 @@ const makeListItemsRef = array => {
   });
 };
 
-makeListItemsRef(ingredients);
+makeListItems(ingredients);

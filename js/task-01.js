@@ -4,7 +4,7 @@ console.log(`В списке ${listCategoriesRef.children.length} категор
 
 const listItemsRef = document.querySelectorAll('.item');
 
-const getInfoRef = list => {
+const getInfo = list => {
   return list.forEach(item => {
     console.log(`Категория: ${item.firstElementChild.textContent}`);
     console.log(
@@ -13,4 +13,4 @@ const getInfoRef = list => {
   });
 };
 
-getInfoRef(listItemsRef);
+getInfo(listItemsRef);

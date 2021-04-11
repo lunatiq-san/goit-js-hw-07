@@ -1,11 +1,16 @@
 const refs = {
-  inputRef: document.querySelector('#validation-input'),
+  inputRef: document.getElementById('validation-input'),
   dataLength: document.querySelector('[data-length="6"]'),
 };
 
-console.log('dataLength', refs.dataLength);
-refs.inputRef.addEventListener('change', onInputChange);
+refs.inputRef.addEventListener('blur', onInputChange);
 
 function onInputChange(event) {
-  console.log('onInputBlur ~ event', event.currentTarget.value.length);
+  if (event.currentTarget.value.length === +refs.dataLength.dataset.length) {
+    refs.inputRef.classList.remove('invalid');
+    refs.inputRef.classList.add('valid');
+  }
+  if (event.currentTarget.value.length !== +refs.dataLength.dataset.length) {
+    refs.inputRef.classList.add('invalid');
+  }
 }

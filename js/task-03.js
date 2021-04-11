@@ -24,8 +24,8 @@ const makeListMarkup = ({ url, alt }) => {
   `;
 };
 
-const galleryListRef = document.querySelector('#gallery');
-
 const makeListAllMarkup = images.map(makeListMarkup).join('');
 
-galleryListRef.insertAdjacentHTML('beforeend', makeListAllMarkup);
+document
+  .querySelector('#gallery')
+  .insertAdjacentHTML('beforeend', makeListAllMarkup);
